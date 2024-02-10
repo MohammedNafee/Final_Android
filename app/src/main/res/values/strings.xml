@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Final_Android</string>
+
+    <string-array name="apartmentOptions">
+        <item>View apartment</item>
+        <item>Add new apartment</item>
+        <item>Rank apartment</item>
+    </string-array>
+</resources>
