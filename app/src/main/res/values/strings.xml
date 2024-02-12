@@ -6,4 +6,8 @@
         <item>Add new apartment</item>
         <item>Rank apartment</item>
     </string-array>
+
+    <string name="notification1">You rated the "Female student boarding apartments" with 4 stars</string>
+    <string name="notification2">There is a new apartment available in Sarda, Birzeit</string>
+
 </resources>

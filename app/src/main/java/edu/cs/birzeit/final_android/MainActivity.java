@@ -1,40 +1,42 @@
 package edu.cs.birzeit.final_android;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
+import android.os.Handler;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-
+    private Animation top, bottom;
+    private TextView txt;
+    private ImageView img;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        top = AnimationUtils.loadAnimation(this, R.anim.top_animation);
+        bottom = AnimationUtils.loadAnimation(this, R.anim.bottom_animation);
 
-        AdapterView.OnItemClickListener itemClickListener = new AdapterView.OnItemClickListener() {
+        // txt = findViewById(R.id.txt);
+        img = findViewById(R.id.img);
+
+        //  txt.setAnimation(bottom);
+        img.setAnimation(top);
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
             @Override
-            public void onItemClick(AdapterView<?> parent,
-                                    View view,
-                                    int position,
-                                    long id) {
-                if(position == 0){
-                    Intent intent = new Intent(MainActivity.this, ApartmentActivity.class);
-                    startActivity(intent);
-                } else if (position == 1){
-                    Intent intent = new Intent(MainActivity.this, AddApartmentActivity.class);
-                    startActivity(intent);
-                }else{
-                    Intent intent = new Intent(MainActivity.this, RankApartmentActivity.class);
-                    intent.putExtra("open_status_change", true);
-                    startActivity(intent);
-                }
+            public void run() {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
             }
-        };
-        ListView listView = (ListView)findViewById(R.id.apartment_menu);
-        listView.setOnItemClickListener(itemClickListener);
+        }, 5000);
     }
 }

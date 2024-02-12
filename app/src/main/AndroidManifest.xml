@@ -13,15 +13,7 @@
         android:theme="@style/Theme.Final_Android"
         tools:targetApi="31"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".AddApartmentActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ApartmentActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RankApartmentActivity"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -31,6 +23,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+        android:name=".ApartmentActivity"
+        android:exported="false" />
+        <activity
+            android:name=".ApartmentDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddApartmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RankApartmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainApartActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
