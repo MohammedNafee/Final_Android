@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-        android:text="Add New Apartment"
+        android:text="Add your review here"
         android:textColor="#FFFFFF"
         android:textSize="24sp" />
 
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/titleTextView"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         android:layout_marginTop="32dp"
         android:gravity="center"
         android:orientation="vertical">
@@ -27,43 +27,38 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter Apartment Details"
+            android:text="Leave a comment here"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/addressEditText"
+            android:id="@+id/commentEditText"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
             android:layout_marginTop="8dp"
             android:background="#7A9391"
-            android:hint="Address"
-            android:padding="10dp" />
+            android:gravity="start"
+            android:hint="Write your comment here"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:maxLines="6" />
 
-        <EditText
-            android:id="@+id/edtRent"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="#7A9391"
-            android:hint="Rent"
-            android:padding="10dp" />
 
-        <EditText
-            android:id="@+id/edtSpace"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:background="#7A9391"
-            android:hint="Space"
-            android:padding="10dp" />
-
-        <Button
-            android:id="@+id/addButton"
+        <RatingBar
+            android:id="@+id/ratingBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Add Apartment1" />
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="1" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Send Feedback" />
 
     </LinearLayout>
 
