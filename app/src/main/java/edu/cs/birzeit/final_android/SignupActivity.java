@@ -34,7 +34,7 @@ public class SignupActivity extends AppCompatActivity {
         signupPassword = findViewById(R.id.signup_password);
         loginRedirectText = findViewById(R.id.loginRedirectText);
         signupButton = findViewById(R.id.signup_button);
-////////////////////////////////////////////////////////////////////////////////////
+
 
 
         signupButton.setOnClickListener(new View.OnClickListener() {

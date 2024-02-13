@@ -46,6 +46,11 @@ public class NotificationActivity extends AppCompatActivity {
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
+                case R.id.bottom_rent:
+                    startActivity(new Intent(getApplicationContext(), MainApartActivity.class));
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
+                    return true;
                 case R.id.bottom_not:
                     return true;
                 case R.id.bottom_profile:

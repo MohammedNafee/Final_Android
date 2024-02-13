@@ -1,10 +1,10 @@
 package edu.cs.birzeit.final_android;
 
 public class Apartment {
-    private int id; //1
-    private String location; //birziet
-    private double price; //900 nis
-    private String ApartmentSpace; //100 m
+    private int id;
+    private String location;
+    private double price;
+    private String ApartmentSpace;
     private int imageResource; //locally
     private String phoneNumber;
 
